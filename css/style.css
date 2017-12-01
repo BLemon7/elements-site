@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'open sans';
+  font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans';
+  margin: 5vw;
+  background: #848482;
+  color: #000;
+  counter-reset: element;
+}
+
+h1 {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.periodic-table {
+  display: grid;
+  grid-column-gap: .5vw;
+  grid-row-gap: .5vw;
+  padding-left: 0;
+}
+.periodic-table > li {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 4.5vw;
+  border-radius: 25%;
+  background: #A1CAF1;
+  font-weight: bold;
+}
+.periodic-table > li:before {
+  counter-increment: element; 
+  content: counter(element);
+  position: absolute;
+  bottom: 5px;
+  left: 6px;
+  font-size: .9vw;
+  font-weight: lighter;
+}
+.periodic-table > li abbr {
+  font-size: 2.5vw;
+}
+#helium {
+  grid-column-start: 18;
+}
+#boron, #aluminium {
+  grid-column-start: 13;
+}
+#cerium, #thorium {
+  grid-column-start: 4;
+}
+.periodic-table > li:nth-child(n+58):nth-last-child(n+48) {
+  grid-row-start: 8;
+}
+.periodic-table > li:nth-child(n+90):nth-last-child(n+16) {
+  grid-row-start: 9;
+}
+.periodic-table:before {
+  display: block;
+  content: '';
+  grid-row: 8 / 10;
+  grid-column: 1 / 4;
+}
+.periodic-table .noble-gas {
+  background: #0067A5;
+}
+.periodic-table .diatomic-nonmetal {
+  background: #875692;
+}
+.periodic-table .alkali {
+  background: #F38400;
+}
+.periodic-table .hydrogen {
+  background: #FFF;  
+}
+.periodic-table .alkaline {
+  background: #CC6666;
+}
+.periodic-table .unknown {
+  background: #C2B280;
+}
+.periodic-table .lanthanide {
+  background: #F3C300;
+}
+.periodic-table .actinide {
+  background: #604E97;  
+}
+.periodic-table .metalloid {
+  background: #008856;  
+}
+.periodic-table .polyatomic-non-metal {
+  background: #c1ebc1;  
+}
+
+@media all and (max-width: 1100px) {
+  #helium, #boron, #aluminium, #cerium, #thorium {
+  grid-column-start: auto;
+  }
+  .periodic-table {
+  grid-template-columns: 1fr 1fr 1fr;
+  }
+  .periodic-table > li abbr {
+    font-size: 0;
+  }
+  .periodic-table > li {
+    padding: 1rem;
+  }
+  .periodic-table > li abbr:after {
+    content: attr(title);
+    font-size: 2rem;
+  }
+  .periodic-table > li:before {
+    font-size: 1rem;
+  }
+  .periodic-table > li:nth-child(n+58):nth-last-child(n+48) {
+  grid-row-start: auto !important;
+}
+  .periodic-table > li:nth-child(n+90):nth-last-child(n+16) {
+    grid-row-start: auto !important;
+  }
+  .periodic-table:before {
+    display: none !important;
+  }
+}
+@media all and (max-width: 750px) {
+  body {
+    margin: 2vw;
+  }
+  .periodic-table {
+    grid-template-columns: 1fr 1fr;
+  }
+  .periodic-table > li {
+    height: auto;
+    font-size: 3vw;
+  }
+}
+@media all and (max-width: 550px) {
+  .periodic-table {
+    grid-template-columns: 1fr;
+  }
+}
