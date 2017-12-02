@@ -16,11 +16,28 @@ body {
 
 h1 {
     color: #fff;
+    text-align: center;
 }
 
+
+
 a {
-    text-decoration: none;
-    color: inherit;
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 47%;
+    font-size: 20px;
 }
 
 .periodic-table {
@@ -73,28 +90,28 @@ a {
   grid-column: 1 / 4;
 }
 .periodic-table .noble-gas {
-  background: #0067A5;
+  background: #875598;
 }
 .periodic-table .diatomic-nonmetal {
-  background: #875692;
+  background: #ffd1dc;
 }
 .periodic-table .alkali {
-  background: #F38400;
+  background: #CC6666;
 }
 .periodic-table .hydrogen {
   background: #FFF;  
 }
 .periodic-table .alkaline {
-  background: #CC6666;
+  background: #F38400;
 }
 .periodic-table .unknown {
   background: #C2B280;
 }
 .periodic-table .lanthanide {
-  background: #F3C300;
+  background: #0067a5;
 }
 .periodic-table .actinide {
-  background: #604E97;  
+  background: #F3C300;  
 }
 .periodic-table .metalloid {
   background: #008856;  
@@ -109,12 +126,14 @@ a {
   }
   .periodic-table {
   grid-template-columns: 1fr 1fr 1fr;
+      border-radius: 25%;
   }
   .periodic-table > li abbr {
     font-size: 0;
   }
   .periodic-table > li {
     padding: 1rem;
+      border-radius: 25%;
   }
   .periodic-table > li abbr:after {
     content: attr(title);
@@ -139,14 +158,17 @@ a {
   }
   .periodic-table {
     grid-template-columns: 1fr 1fr;
+    border-radius: 0%;
   }
   .periodic-table > li {
     height: auto;
     font-size: 3vw;
+    border-radius: 0%;
   }
 }
 @media all and (max-width: 550px) {
   .periodic-table {
     grid-template-columns: 1fr;
+    border-radius: 0%;
   }
 }
