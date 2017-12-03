@@ -192,6 +192,27 @@ p {
     background: #c1ebc1;
 }
 
+img {
+    display: block;
+    width: 20%;
+    margin: auto;
+}
+
+.flag {
+    display: block;
+}
+
+.element {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 4.5vw;
+    border-radius: 25%;
+    background: #A1CAF1;
+    font-weight: bold;
+}
+
 
 /* MEDIA */
 
@@ -230,18 +251,6 @@ p {
     .periodic-table:before {
         display: none !important;
     }
-}
-
-img {
-    display: block;
-    width: auto;
-    margin: auto;
-}
-
-.flag {
-    display: block;
-    max-width: 15%;
-    margin: 0 auto;
 }
 
 @media all and (max-width: 750px) {
