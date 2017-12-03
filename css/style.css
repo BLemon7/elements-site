@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+abbr {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Open Sans';
     margin: 5vw;
@@ -95,7 +99,28 @@ p {
 }
 
 .periodic-table>li abbr {
-    font-size: 2.5vw;
+    font-size: 15px;
+}
+
+.periodic-table>a {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 4.5vw;
+    border-radius: 25%;
+    background: #A1CAF1;
+    font-weight: bold;
+}
+
+.periodic-table>a:before {
+    counter-increment: element;
+    content: counter(element);
+    position: absolute;
+    bottom: 5px;
+    left: 6px;
+    font-size: .9vw;
+    font-weight: lighter;
 }
 
 #helium {
@@ -167,6 +192,9 @@ p {
     background: #c1ebc1;
 }
 
+
+/* MEDIA */
+
 @media all and (max-width: 1100px) {
     #helium,
     #boron,
@@ -202,6 +230,18 @@ p {
     .periodic-table:before {
         display: none !important;
     }
+}
+
+img {
+    display: block;
+    width: auto;
+    margin: auto;
+}
+
+.flag {
+    display: block;
+    max-width: 15%;
+    margin: 0 auto;
 }
 
 @media all and (max-width: 750px) {
