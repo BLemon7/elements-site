@@ -206,6 +206,8 @@ img {
     text-align: center;
     width: 20%;
     margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .square:after {
