@@ -48,7 +48,7 @@ a {
     color: inherit;
     text-decoration: none;
     -webkit-text-decoration-skip: objects;
-    padding-top: 20px;
+    padding-top: 25px;
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
@@ -71,6 +71,33 @@ p {
     padding-bottom: 10px;
 }
 
+.periodic-key {
+    display: grid;
+    grid-column-gap: .5vw;
+    grid-row-gap: .5vw;
+    padding-left: 0;
+}
+
+.periodic-key  li {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 4.5vw;
+    font-weight: bold;
+}
+
+
+.periodic-key:before {
+    display: block;
+    content: '';
+    grid-row: 8 / 10;
+    grid-column: 1 / 7;
+}
+
+
+
+
 .periodic-table {
     display: grid;
     grid-column-gap: .5vw;
@@ -78,32 +105,35 @@ p {
     padding-left: 0;
 }
 
-.periodic-table>li {
+.periodic-table  li {
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
     height: 4.5vw;
     border-radius: 25%;
-    background: #A1CAF1;
     font-weight: bold;
 }
 
-.periodic-table>li:before {
+.periodic-table > li:before {
     counter-increment: element;
     content: counter(element);
     position: absolute;
-    bottom: 5px;
-    left: 6px;
+    bottom: 10px;
+    left: 10px;
     font-size: .9vw;
     /*font-weight: lighter;*/
 }
 
-.periodic-table>li abbr {
+.periodic-table > li abbr {
     font-size: 15px;
 }
 
-.periodic-table>a {
+li:has(> a) {
+	border: dotted black;
+}
+
+.periodic-table > a {
     display: flex;
     position: relative;
     justify-content: center;
@@ -113,7 +143,7 @@ p {
     font-weight: bold;
 }
 
-.periodic-table>a:before {
+.periodic-table > a:before {
     counter-increment: element;
     content: counter(element);
     position: absolute;
@@ -123,25 +153,25 @@ p {
     font-weight: lighter;
 }
 
-#helium {
+.helium {
     grid-column-start: 18;
 }
 
-#boron,
-#aluminium {
+.boron,
+.aluminium {
     grid-column-start: 13;
 }
 
-#cerium,
-#thorium {
+.cerium,
+.thorium {
     grid-column-start: 4;
 }
 
-.periodic-table>li:nth-child(n+58):nth-last-child(n+48) {
+.periodic-table > li:nth-child(n+58):nth-last-child(n+48) {
     grid-row-start: 8;
 }
 
-.periodic-table>li:nth-child(n+90):nth-last-child(n+16) {
+.periodic-table > li:nth-child(n+90):nth-last-child(n+16) {
     grid-row-start: 9;
 }
 
@@ -152,45 +182,52 @@ p {
     grid-column: 1 / 4;
 }
 
-.periodic-table .noble-gas {
-    background: #875598;
-}
-
-.periodic-table .diatomic-nonmetal {
-    background: #ffd1dc;
-}
-
-.periodic-table .alkali {
-    background: #CC6666;
-}
-
-.periodic-table .hydrogen {
+.type-0 {
     background: #FFF;
 }
 
-.periodic-table .alkaline {
+.type-1 {
+    background: #875598;
+}
+
+.type-2 {
+    background: #CC6666;
+}
+
+.type-3 {
     background: #F38400;
 }
 
-.periodic-table .unknown {
-    background: #C2B280;
-}
-
-.periodic-table .lanthanide {
-    background: #0067a5;
-}
-
-.periodic-table .actinide {
-    background: #F3C300;
-}
-
-.periodic-table .metalloid {
+.type-4 {
     background: #008856;
 }
 
-.periodic-table .polyatomic-non-metal {
+.type-5 {
     background: #c1ebc1;
 }
+
+
+.type-6 {
+    background: #ffd1dc;
+}
+
+.type-7 {
+    background: #F3C300;
+}
+
+.type-8 {
+    background: #0067a5;
+}
+
+.type-9 {
+    background: #A1CAF1;
+}
+
+
+.type-10 {
+    background: #C2B280;
+}
+
 
 img {
     display: block;
@@ -234,44 +271,69 @@ img {
     height: 100vh;
 }
 
+#key-expander {
+	display:none;
+}
+
+.linkable-li {
+	border: 2px dotted black;
+}
+
+.linkable-li:hover, .periodic-key  li:hover {
+	background: rgba(0,0,0,.5);
+}
+
+.periodic-key  li:hover  {
+	cursor: pointer;
+}
+
+.blurred-element {
+	opacity: 0.2;
+}
 
 /* MEDIA */
 
 @media all and (max-width: 1100px) {
-    #helium,
-    #boron,
-    #aluminium,
-    #cerium,
-    #thorium {
+    .helium,
+    .boron,
+    .aluminium,
+    .cerium,
+    .thorium {
         grid-column-start: auto;
     }
     .periodic-table {
         grid-template-columns: 1fr 1fr 1fr;
         border-radius: 25%;
     }
-    .periodic-table>li abbr {
+    .periodic-table > li abbr {
         font-size: 0;
     }
-    .periodic-table>li {
+    .periodic-table > li {
         padding: 1rem;
         border-radius: 25%;
     }
-    .periodic-table>li abbr:after {
+    .periodic-table > li abbr:after {
         content: attr(title);
         font-size: 2rem;
     }
-    .periodic-table>li:before {
+    .periodic-table > li:before {
         font-size: 1rem;
     }
-    .periodic-table>li:nth-child(n+58):nth-last-child(n+48) {
+    .periodic-table > li:nth-child(n+58):nth-last-child(n+48) {
         grid-row-start: auto !important;
     }
-    .periodic-table>li:nth-child(n+90):nth-last-child(n+16) {
+    .periodic-table > li:nth-child(n+90):nth-last-child(n+16) {
         grid-row-start: auto !important;
     }
     .periodic-table:before {
         display: none !important;
     }
+		.key-container {
+        display: none;
+    }
+		a { 
+			padding-top: 0;
+		}
 }
 
 @media all and (max-width: 750px) {
@@ -282,16 +344,30 @@ img {
         grid-template-columns: 1fr 1fr;
         border-radius: 0%;
     }
-    .periodic-table>li {
+    .periodic-table > li {
         height: auto;
         font-size: 3vw;
         border-radius: 0%;
     }
+		.key-container {
+        display: none;
+    }
+		a { 
+			padding-top: 10px;
+		}
+
 }
 
 @media all and (max-width: 550px) {
-    .periodic-table {
+    .periodic-table, .periodic-key  {
         grid-template-columns: 1fr;
         border-radius: 0%;
     }
+    .key-container {
+        display: none;
+    }
+		a { 
+			padding-top: 0;
+		}
+
 }
