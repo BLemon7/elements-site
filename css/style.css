@@ -126,7 +126,7 @@ p {
 }
 
 li:has(> a) {
-    border: dotted black;
+    border: dotted #fff;
 }
 
 .periodic-table>a {
@@ -269,7 +269,7 @@ img {
 }
 
 .linkable-li {
-    border: 2px dotted black;
+    border: 3px solid #222;
 }
 
 .linkable-li:hover,
@@ -283,6 +283,28 @@ img {
 
 .blurred-element {
     opacity: 0.2;
+}
+
+button {
+    background-color: #008856;
+    border: 1px solid #008856;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #008856;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 
