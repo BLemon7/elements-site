@@ -3,169 +3,192 @@
 <body>
 
     <head>
-		    <title>Interactive Periodic Table</title>
+        <title>Interactive Periodic Table</title>
         <!-- external CSS/font -->
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        
-				<!-- internal CSS -->
+
+        <!-- internal CSS -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
-				
-				<!-- external JS -->
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        
-				<!-- internal JS -->
+
+        <!-- external JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+        <!-- internal JS -->
         <script src="js/script.js"></script>
 
-				
+
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="apple-touch-icon" href="images/favicon.png">
-			
+
     </head>
 
     <h1>Periodic Table of Elements</h1>
 
-		<div class="key-container">
-			<button id="filter-elements">Filter Elements</button>
-			<button id="clear-filter" class="type-1">Clear Filter</button>
-			<button id="unusual-elements" class="type-2">Unusually Named Elements</button>
-			
-			<div id="key-expander">
+    <div class="key-container">
+        <button id="filter-elements">Filter Elements</button>
+        <button id="unusual-elements" class="type-1">Unusual Abbreviations</button>
+        <button id="clear-filter" class="type-2">Clear Filter</button>
 
-				<ol class="periodic-key">
-					<li class="type-0" onClick="showElements(this);">Hydrogen</li>
-					<li class="type-1" onClick="showElements(this);">Nobel Gases</li>
-					<li class="type-2" onClick="showElements(this);">Alkalis</li>
-					<li class="type-3" onClick="showElements(this);">Alkalines</li>
-					<li class="type-4" onClick="showElements(this);">Metalloids</li>
-					<li class="type-5" onClick="showElements(this);">Polyatomic non metals</li>
-					<li class="type-6" onClick="showElements(this);">Diatomic non metals</li>
-					<li class="type-7" onClick="showElements(this);">Actinides </li>
-					<li class="type-8" onClick="showElements(this);">Lanthanides</li>
-					<li class="type-9" onClick="showElements(this);">Metals</li>
-					<li class="type-10" onClick="showElements(this);">Unknown</li>
-				</ol>
-			</div>
-		</div>
-		
+
+        <div id="key-expander">
+
+            <ol class="periodic-key">
+                <li class="type-0" onClick="showElements(this);">Hydrogen</li>
+                <li class="type-1" onClick="showElements(this);">Nobel Gases</li>
+                <li class="type-2" onClick="showElements(this);">Alkalis</li>
+                <li class="type-3" onClick="showElements(this);">Alkalines</li>
+                <li class="type-4" onClick="showElements(this);">Metalloids</li>
+                <li class="type-5" onClick="showElements(this);">Polyatomic non metals</li>
+                <li class="type-6" onClick="showElements(this);">Diatomic non metals</li>
+                <li class="type-7" onClick="showElements(this);">Actinides </li>
+                <li class="type-8" onClick="showElements(this);">Lanthanides</li>
+                <li class="type-9" onClick="showElements(this);">Metals</li>
+                <li class="type-10" onClick="showElements(this);">Unknown</li>
+            </ol>
+        </div>
+    </div>
+
     <ol class="periodic-table">
-			<li class="type-0 hydrogen"><abbr title="Hydrogen">H</abbr></li>		
-			<li class="type-1 helium"><abbr title="Helium">He</abbr></li>
-			<li class="type-2"><abbr title="Lithium">Li</abbr></li>
-			<li class="type-3"><abbr title="Beryllium">Be</abbr></li>
-			<li class="type-4 boron"><abbr title="Boron">B</abbr></li>
-			<li class="type-5"><abbr title="Carbon">C</abbr></li>
-			<li class="type-6"><abbr title="Nitrogen">N</abbr></li>
-			<li class="type-6"><abbr title="Oxygen">O</abbr></li>
-			<li class="type-6"><abbr title="Fluorine">F</abbr></li>
-			<li class="type-1"><abbr title="Neon">Ne</abbr></li>
-			<li class="type-2"><a href="sodium.html"> <abbr title="Sodium">Na</abbr> </a></li>
-			<li class="type-3"><abbr title="Magnesium">Mg</abbr></li>
-			<li class="type-9 aluminium"><abbr title="Aluminium">Al</abbr></li>
-			<li class="type-4"><abbr title="Silicon">Si</abbr></li>
-			<li class="type-5"><abbr title="Phosphorus">P</abbr></li>
-			<li class="type-5"><abbr title="Sulphur">S</abbr></li>
-			<li class="type-6"><abbr title="Chlorine">Cl</abbr></li>
-			<li class="type-1"><abbr title="Argon">Ar</abbr></li>
-			<li class="type-2"><a href="pottasium.html"> <abbr title="Potassium">K</abbr> </a></li>
-			<li class="type-3"><abbr title="Calcium">Ca</abbr></li>
-			<li class="type-9"><abbr title="Scandium">Sc</abbr></li>
-			<li class="type-9"><abbr title="Titanium">Ti</abbr></li>
-			<li class="type-9"><abbr title="Vanadium">V</abbr></li>
-			<li class="type-9"><abbr title="Chromium">Cr</abbr></li>
-			<li class="type-9"><abbr title="Manganese">Mn</abbr></li>
-			<li class="type-9"><a href="iron.html"> <abbr title="Iron">Fe</abbr> </a></li>
-			<li class="type-9"><abbr title="Cobalt">Co</abbr></li>
-			<li class="type-9"><abbr title="Nickel">Ni</abbr></li>
-			<li class="type-9"><a href="copper.html"> <abbr title="Copper">Cu</abbr> </a></li>
-			<li class="type-9"><abbr title="Zinc">Zn</abbr></li>
-			<li class="type-9"><abbr title="Gallium">Ga</abbr></li>
-			<li class="type-4"><abbr title="Germanium">Ge</abbr></li>
-			<li class="type-4"><abbr title="Arsenic">As</abbr></li>
-			<li class="type-5"><abbr title="Selenium">Se</abbr></li>
-			<li class="type-6"><abbr title="Bromide">Br</abbr></li>
-			<li class="type-1"><abbr title="Krypton">Kr</abbr></li>
-			<li class="type-2"><abbr title="Rubidium">Rb</abbr></li>
-			<li class="type-3"><abbr title="Strontium">Sr</abbr></li>
-			<li class="type-9"><abbr title="Yttrium">Y</abbr></li>
-			<li class="type-9"><abbr title="Zirconium">Zr</abbr></li>
-			<li class="type-9"><abbr title="Niobium">Nb</abbr></li>
-			<li class="type-9"><abbr title="Molybdenum">Mo</abbr></li>
-			<li class="type-9"><abbr title="Technetium">Tc</abbr></li>
-			<li class="type-9"><abbr title="Ruthenium">Ru</abbr></li>
-			<li class="type-9"><abbr title="Rhodium">Ro</abbr></li>
-			<li class="type-9"><abbr title="Palladium">Pd</abbr></li>
-			<li class="type-9"><a href="silver.html"> <abbr title="Silver">Ag</abbr></a></li>
-			<li class="type-9"><abbr title="Cadmium">Cd</abbr></li>
-			<li class="type-9"><abbr title="Indium">In</abbr></li>
-			<li class="type-9"><a href="tin.html"> <abbr title="Tin">Sn</abbr></a></li>
-			<li class="type-4"><a href="antimony.html"> <abbr title="Antimony">Sb</abbr> </a></li>
-			<li class="type-4"><abbr title="Tellurium">Te</abbr></li>
-			<li class="type-6"><abbr title="Iodine">I</abbr></li>
-			<li class="type-1"><abbr title="Xenon">Xe</abbr></li>
-			<li class="type-2"><abbr title="Caesium">Cs</abbr></li>
-			<li class="type-3"><abbr title="Barium">Ba</abbr></li>
-			<li class="type-8"><abbr title="Lanthanum">La</abbr></li>
-			<li class="type-8 cerium"><abbr title="Cerium">Ce</abbr></li>
-			<li class="type-8"><abbr title="Praseodymium">Pr</abbr></li>
-			<li class="type-8"><abbr title="Neodymium">Nd</abbr></li>
-			<li class="type-8"><abbr title="Promethium">Pm</abbr></li>
-			<li class="type-8"><abbr title="Samarium">Sm</abbr></li>
-			<li class="type-8"><abbr title="Europium">Eu</abbr></li>
-			<li class="type-8"><abbr title="Gadolinium">Gd</abbr></li>
-			<li class="type-8"><abbr title="Terbium">Td</abbr></li>
-			<li class="type-8"><abbr title="Dysprosium">Dy</abbr></li>
-			<li class="type-8"><abbr title="Holmium">Ho</abbr></li>
-			<li class="type-8"><abbr title="Erbium">Er</abbr></li>
-			<li class="type-8"><abbr title="Thulium">Tm</abbr></li>
-			<li class="type-8"><abbr title="Ytterbium">Yb</abbr></li>
-			<li class="type-8"><abbr title="Lutetium">Lu</abbr></li>
-			<li class="type-9 hafnium"><abbr title="Hafnium">Hf</abbr></li>
-			<li class="type-9"><abbr title="Tantalum">Ta</abbr></li>
-			<li class="type-9"><a href="tungsten.html"> <abbr title="Tungsten">W</abbr> </a></li>
-			<li class="type-9"><abbr title="Rhenium">Re</abbr></li>
-			<li class="type-9"><abbr title="Osmium">Os</abbr></li>
-			<li class="type-9"><abbr title="Iridium">Ir</abbr></li>
-			<li class="type-9"><abbr title="Platinum">Pt</abbr></li>
-			<li class="type-9"><a href="gold.html"> <abbr title="Gold">Au</abbr> </a></li>
-			<li class="type-9"><a href="mercury.html"> <abbr title="Mercury">Hg</abbr> </a></li>
-			<li class="type-9"><abbr title="Thallium">Tl</abbr></li>
-			<li class="type-9"><a href="lead.html"> <abbr title="Lead">Pb</abbr> </a></li>
-			<li class="type-9"><abbr title="Bismuth">Bi</abbr></li>
-			<li class="type-9"><abbr title="Polonium">Po</abbr></li>
-			<li class="type-4"><abbr title="Astatine">At</abbr></li>
-			<li class="type-1"><abbr title="Radon">Rn</abbr></li>
-			<li class="type-2"><abbr title="Francium">Fr</abbr></li>
-			<li class="type-3"><abbr title="Radium">Ra</abbr></li>
-			<li class="type-7"><abbr title="Actinium">Ac</abbr></li>
-			<li class="type-7 thorium"><abbr title="Thorium">Th</abbr></li>
-			<li class="type-7"><abbr title="Protactinium">Pa</abbr></li>
-			<li class="type-7"><abbr title="Uranium">U</abbr></li>
-			<li class="type-7"><abbr title="Neptunium">Np</abbr></li>
-			<li class="type-7"><abbr title="Plutonium">Pu</abbr></li>
-			<li class="type-7"><abbr title="Americium">Am</abbr></li>
-			<li class="type-7"><abbr title="Curium">Cm</abbr></li>
-			<li class="type-7"><abbr title="Berkelium">Bk</abbr></li>
-			<li class="type-7"><abbr title="Californium">Cf</abbr></li>
-			<li class="type-7"><abbr title="Einsteinium">Es</abbr></li>
-			<li class="type-7"><abbr title="Fermium">Fm</abbr></li>
-			<li class="type-7"><abbr title="Mendelevium">Md</abbr></li>
-			<li class="type-7"><abbr title="Nobelium">No</abbr></li>
-			<li class="type-7"><abbr title="Lawrencium">Lr</abbr></li>
-			<li class="type-9 rutherfordium"><abbr title="Rutherfordium">Rf</abbr></li>
-			<li class="type-9"><abbr title="Dubnium">Db</abbr></li>
-			<li class="type-9"><abbr title="Seaborgium">Sg</abbr></li>
-			<li class="type-9"><abbr title="Bohrium">Bh</abbr></li>
-			<li class="type-9"><abbr title="Hassium">Hs</abbr></li>
-			<li class="type-10"><abbr title="Meitnerium">Mt</abbr></li>
-			<li class="type-10"><abbr title="Darmstadtium">Ds</abbr></li>
-			<li class="type-10"><abbr title="Roentgenium">Rg</abbr></li>
-			<li class="type-9"><abbr title="Copernicium">Cn</abbr></li>
-			<li class="type-10"><abbr title="Nihonium">Nh</abbr></li>
-			<li class="type-10"><abbr title="Flerovium">Fl</abbr></li>
-			<li class="type-10"><abbr title="Moscovium">Mc</abbr></li>
-			<li class="type-10"><abbr title="Livermorium">Lv</abbr></li>
-			<li class="type-10"><abbr title="Tennessine">Ts</abbr></li>
-			<li class="type-10"><abbr title="Oganesson">Og</abbr></li>
+        <li class="type-0 hydrogen"><abbr title="Hydrogen">H</abbr></li>
+        <li class="type-1 helium"><abbr title="Helium">He</abbr></li>
+        <li class="type-2"><abbr title="Lithium">Li</abbr></li>
+        <li class="type-3"><abbr title="Beryllium">Be</abbr></li>
+        <li class="type-4 boron"><abbr title="Boron">B</abbr></li>
+        <li class="type-5"><abbr title="Carbon">C</abbr></li>
+        <li class="type-6"><abbr title="Nitrogen">N</abbr></li>
+        <li class="type-6"><abbr title="Oxygen">O</abbr></li>
+        <li class="type-6"><abbr title="Fluorine">F</abbr></li>
+        <li class="type-1"><abbr title="Neon">Ne</abbr></li>
+        <li class="type-2">
+            <a href="sodium.html"> <abbr title="Sodium">Na</abbr> </a>
+        </li>
+        <li class="type-3"><abbr title="Magnesium">Mg</abbr></li>
+        <li class="type-9 aluminium"><abbr title="Aluminium">Al</abbr></li>
+        <li class="type-4"><abbr title="Silicon">Si</abbr></li>
+        <li class="type-5"><abbr title="Phosphorus">P</abbr></li>
+        <li class="type-5"><abbr title="Sulphur">S</abbr></li>
+        <li class="type-6"><abbr title="Chlorine">Cl</abbr></li>
+        <li class="type-1"><abbr title="Argon">Ar</abbr></li>
+        <li class="type-2">
+            <a href="pottasium.html"> <abbr title="Potassium">K</abbr> </a>
+        </li>
+        <li class="type-3"><abbr title="Calcium">Ca</abbr></li>
+        <li class="type-9"><abbr title="Scandium">Sc</abbr></li>
+        <li class="type-9"><abbr title="Titanium">Ti</abbr></li>
+        <li class="type-9"><abbr title="Vanadium">V</abbr></li>
+        <li class="type-9"><abbr title="Chromium">Cr</abbr></li>
+        <li class="type-9"><abbr title="Manganese">Mn</abbr></li>
+        <li class="type-9">
+            <a href="iron.html"> <abbr title="Iron">Fe</abbr> </a>
+        </li>
+        <li class="type-9"><abbr title="Cobalt">Co</abbr></li>
+        <li class="type-9"><abbr title="Nickel">Ni</abbr></li>
+        <li class="type-9">
+            <a href="copper.html"> <abbr title="Copper">Cu</abbr> </a>
+        </li>
+        <li class="type-9"><abbr title="Zinc">Zn</abbr></li>
+        <li class="type-9"><abbr title="Gallium">Ga</abbr></li>
+        <li class="type-4"><abbr title="Germanium">Ge</abbr></li>
+        <li class="type-4"><abbr title="Arsenic">As</abbr></li>
+        <li class="type-5"><abbr title="Selenium">Se</abbr></li>
+        <li class="type-6"><abbr title="Bromide">Br</abbr></li>
+        <li class="type-1"><abbr title="Krypton">Kr</abbr></li>
+        <li class="type-2"><abbr title="Rubidium">Rb</abbr></li>
+        <li class="type-3"><abbr title="Strontium">Sr</abbr></li>
+        <li class="type-9"><abbr title="Yttrium">Y</abbr></li>
+        <li class="type-9"><abbr title="Zirconium">Zr</abbr></li>
+        <li class="type-9"><abbr title="Niobium">Nb</abbr></li>
+        <li class="type-9"><abbr title="Molybdenum">Mo</abbr></li>
+        <li class="type-9"><abbr title="Technetium">Tc</abbr></li>
+        <li class="type-9"><abbr title="Ruthenium">Ru</abbr></li>
+        <li class="type-9"><abbr title="Rhodium">Ro</abbr></li>
+        <li class="type-9"><abbr title="Palladium">Pd</abbr></li>
+        <li class="type-9">
+            <a href="silver.html"> <abbr title="Silver">Ag</abbr></a>
+        </li>
+        <li class="type-9"><abbr title="Cadmium">Cd</abbr></li>
+        <li class="type-9"><abbr title="Indium">In</abbr></li>
+        <li class="type-9">
+            <a href="tin.html"> <abbr title="Tin">Sn</abbr></a>
+        </li>
+        <li class="type-4">
+            <a href="antimony.html"> <abbr title="Antimony">Sb</abbr> </a>
+        </li>
+        <li class="type-4"><abbr title="Tellurium">Te</abbr></li>
+        <li class="type-6"><abbr title="Iodine">I</abbr></li>
+        <li class="type-1"><abbr title="Xenon">Xe</abbr></li>
+        <li class="type-2"><abbr title="Caesium">Cs</abbr></li>
+        <li class="type-3"><abbr title="Barium">Ba</abbr></li>
+        <li class="type-8"><abbr title="Lanthanum">La</abbr></li>
+        <li class="type-8 cerium"><abbr title="Cerium">Ce</abbr></li>
+        <li class="type-8"><abbr title="Praseodymium">Pr</abbr></li>
+        <li class="type-8"><abbr title="Neodymium">Nd</abbr></li>
+        <li class="type-8"><abbr title="Promethium">Pm</abbr></li>
+        <li class="type-8"><abbr title="Samarium">Sm</abbr></li>
+        <li class="type-8"><abbr title="Europium">Eu</abbr></li>
+        <li class="type-8"><abbr title="Gadolinium">Gd</abbr></li>
+        <li class="type-8"><abbr title="Terbium">Td</abbr></li>
+        <li class="type-8"><abbr title="Dysprosium">Dy</abbr></li>
+        <li class="type-8"><abbr title="Holmium">Ho</abbr></li>
+        <li class="type-8"><abbr title="Erbium">Er</abbr></li>
+        <li class="type-8"><abbr title="Thulium">Tm</abbr></li>
+        <li class="type-8"><abbr title="Ytterbium">Yb</abbr></li>
+        <li class="type-8"><abbr title="Lutetium">Lu</abbr></li>
+        <li class="type-9 hafnium"><abbr title="Hafnium">Hf</abbr></li>
+        <li class="type-9"><abbr title="Tantalum">Ta</abbr></li>
+        <li class="type-9">
+            <a href="tungsten.html"> <abbr title="Tungsten">W</abbr> </a>
+        </li>
+        <li class="type-9"><abbr title="Rhenium">Re</abbr></li>
+        <li class="type-9"><abbr title="Osmium">Os</abbr></li>
+        <li class="type-9"><abbr title="Iridium">Ir</abbr></li>
+        <li class="type-9"><abbr title="Platinum">Pt</abbr></li>
+        <li class="type-9">
+            <a href="gold.html"> <abbr title="Gold">Au</abbr> </a>
+        </li>
+        <li class="type-9">
+            <a href="mercury.html"> <abbr title="Mercury">Hg</abbr> </a>
+        </li>
+        <li class="type-9"><abbr title="Thallium">Tl</abbr></li>
+        <li class="type-9">
+            <a href="lead.html"> <abbr title="Lead">Pb</abbr> </a>
+        </li>
+        <li class="type-9"><abbr title="Bismuth">Bi</abbr></li>
+        <li class="type-9"><abbr title="Polonium">Po</abbr></li>
+        <li class="type-4"><abbr title="Astatine">At</abbr></li>
+        <li class="type-1"><abbr title="Radon">Rn</abbr></li>
+        <li class="type-2"><abbr title="Francium">Fr</abbr></li>
+        <li class="type-3"><abbr title="Radium">Ra</abbr></li>
+        <li class="type-7"><abbr title="Actinium">Ac</abbr></li>
+        <li class="type-7 thorium"><abbr title="Thorium">Th</abbr></li>
+        <li class="type-7"><abbr title="Protactinium">Pa</abbr></li>
+        <li class="type-7"><abbr title="Uranium">U</abbr></li>
+        <li class="type-7"><abbr title="Neptunium">Np</abbr></li>
+        <li class="type-7"><abbr title="Plutonium">Pu</abbr></li>
+        <li class="type-7"><abbr title="Americium">Am</abbr></li>
+        <li class="type-7"><abbr title="Curium">Cm</abbr></li>
+        <li class="type-7"><abbr title="Berkelium">Bk</abbr></li>
+        <li class="type-7"><abbr title="Californium">Cf</abbr></li>
+        <li class="type-7"><abbr title="Einsteinium">Es</abbr></li>
+        <li class="type-7"><abbr title="Fermium">Fm</abbr></li>
+        <li class="type-7"><abbr title="Mendelevium">Md</abbr></li>
+        <li class="type-7"><abbr title="Nobelium">No</abbr></li>
+        <li class="type-7"><abbr title="Lawrencium">Lr</abbr></li>
+        <li class="type-9 rutherfordium"><abbr title="Rutherfordium">Rf</abbr></li>
+        <li class="type-9"><abbr title="Dubnium">Db</abbr></li>
+        <li class="type-9"><abbr title="Seaborgium">Sg</abbr></li>
+        <li class="type-9"><abbr title="Bohrium">Bh</abbr></li>
+        <li class="type-9"><abbr title="Hassium">Hs</abbr></li>
+        <li class="type-10"><abbr title="Meitnerium">Mt</abbr></li>
+        <li class="type-10"><abbr title="Darmstadtium">Ds</abbr></li>
+        <li class="type-10"><abbr title="Roentgenium">Rg</abbr></li>
+        <li class="type-9"><abbr title="Copernicium">Cn</abbr></li>
+        <li class="type-10"><abbr title="Nihonium">Nh</abbr></li>
+        <li class="type-10"><abbr title="Flerovium">Fl</abbr></li>
+        <li class="type-10"><abbr title="Moscovium">Mc</abbr></li>
+        <li class="type-10"><abbr title="Livermorium">Lv</abbr></li>
+        <li class="type-10"><abbr title="Tennessine">Ts</abbr></li>
+        <li class="type-10"><abbr title="Oganesson">Og</abbr></li>
     </ol>
 
 
