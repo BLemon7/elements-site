@@ -78,11 +78,7 @@ p {
     padding-left: 0;
 }
 
-<<<<<<< HEAD
 .periodic-key li {
-=======
-.periodic-key  li {
->>>>>>> origin/master
     display: flex;
     position: relative;
     justify-content: center;
@@ -91,10 +87,6 @@ p {
     font-weight: bold;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 .periodic-key:before {
     display: block;
     content: '';
@@ -102,12 +94,6 @@ p {
     grid-column: 1 / 7;
 }
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/master
 .periodic-table {
     display: grid;
     grid-column-gap: .5vw;
@@ -115,11 +101,7 @@ p {
     padding-left: 0;
 }
 
-<<<<<<< HEAD
 .periodic-table li {
-=======
-.periodic-table  li {
->>>>>>> origin/master
     display: flex;
     position: relative;
     justify-content: center;
@@ -129,7 +111,7 @@ p {
     font-weight: bold;
 }
 
-.periodic-table > li:before {
+.periodic-table>li:before {
     counter-increment: element;
     content: counter(element);
     position: absolute;
@@ -139,22 +121,15 @@ p {
     /*font-weight: lighter;*/
 }
 
-.periodic-table > li abbr {
+.periodic-table>li abbr {
     font-size: 15px;
 }
 
 li:has(> a) {
-<<<<<<< HEAD
     border: dotted black;
 }
 
 .periodic-table>a {
-=======
-	border: dotted black;
-}
-
-.periodic-table > a {
->>>>>>> origin/master
     display: flex;
     position: relative;
     justify-content: center;
@@ -164,7 +139,7 @@ li:has(> a) {
     font-weight: bold;
 }
 
-.periodic-table > a:before {
+.periodic-table>a:before {
     counter-increment: element;
     content: counter(element);
     position: absolute;
@@ -188,11 +163,11 @@ li:has(> a) {
     grid-column-start: 4;
 }
 
-.periodic-table > li:nth-child(n+58):nth-last-child(n+48) {
+.periodic-table>li:nth-child(n+58):nth-last-child(n+48) {
     grid-row-start: 8;
 }
 
-.periodic-table > li:nth-child(n+90):nth-last-child(n+16) {
+.periodic-table>li:nth-child(n+90):nth-last-child(n+16) {
     grid-row-start: 9;
 }
 
@@ -227,10 +202,6 @@ li:has(> a) {
     background: #c1ebc1;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 .type-6 {
     background: #ffd1dc;
 }
@@ -247,14 +218,9 @@ li:has(> a) {
     background: #A1CAF1;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 .type-10 {
     background: #C2B280;
 }
-
 
 img {
     display: block;
@@ -299,7 +265,6 @@ img {
 }
 
 #key-expander {
-<<<<<<< HEAD
     display: none;
 }
 
@@ -320,26 +285,6 @@ img {
     opacity: 0.2;
 }
 
-=======
-	display:none;
-}
-
-.linkable-li {
-	border: 2px dotted black;
-}
-
-.linkable-li:hover, .periodic-key  li:hover {
-	background: rgba(0,0,0,.5);
-}
-
-.periodic-key  li:hover  {
-	cursor: pointer;
-}
-
-.blurred-element {
-	opacity: 0.2;
-}
->>>>>>> origin/master
 
 /* MEDIA */
 
@@ -355,44 +300,35 @@ img {
         grid-template-columns: 1fr 1fr 1fr;
         border-radius: 25%;
     }
-    .periodic-table > li abbr {
+    .periodic-table>li abbr {
         font-size: 0;
     }
-    .periodic-table > li {
+    .periodic-table>li {
         padding: 1rem;
         border-radius: 25%;
     }
-    .periodic-table > li abbr:after {
+    .periodic-table>li abbr:after {
         content: attr(title);
         font-size: 2rem;
     }
-    .periodic-table > li:before {
+    .periodic-table>li:before {
         font-size: 1rem;
     }
-    .periodic-table > li:nth-child(n+58):nth-last-child(n+48) {
+    .periodic-table>li:nth-child(n+58):nth-last-child(n+48) {
         grid-row-start: auto !important;
     }
-    .periodic-table > li:nth-child(n+90):nth-last-child(n+16) {
+    .periodic-table>li:nth-child(n+90):nth-last-child(n+16) {
         grid-row-start: auto !important;
     }
     .periodic-table:before {
         display: none !important;
     }
-<<<<<<< HEAD
     .key-container {
         display: none;
     }
     a {
         padding-top: 0;
     }
-=======
-		.key-container {
-        display: none;
-    }
-		a { 
-			padding-top: 0;
-		}
->>>>>>> origin/master
 }
 
 @media all and (max-width: 750px) {
@@ -403,12 +339,11 @@ img {
         grid-template-columns: 1fr 1fr;
         border-radius: 0%;
     }
-    .periodic-table > li {
+    .periodic-table>li {
         height: auto;
         font-size: 3vw;
         border-radius: 0%;
     }
-<<<<<<< HEAD
     .key-container {
         display: none;
     }
@@ -420,33 +355,13 @@ img {
 @media all and (max-width: 550px) {
     .periodic-table,
     .periodic-key {
-=======
-		.key-container {
-        display: none;
-    }
-		a { 
-			padding-top: 10px;
-		}
-
-}
-
-@media all and (max-width: 550px) {
-    .periodic-table, .periodic-key  {
->>>>>>> origin/master
         grid-template-columns: 1fr;
         border-radius: 0%;
     }
     .key-container {
         display: none;
     }
-<<<<<<< HEAD
     a {
         padding-top: 0;
     }
-=======
-		a { 
-			padding-top: 0;
-		}
-
->>>>>>> origin/master
 }
