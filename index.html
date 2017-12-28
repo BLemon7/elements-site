@@ -1,41 +1,42 @@
 <html>
 
-<body>
+<head>
+    <title>Interactive Periodic Table</title>
+    <!-- external CSS/font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
 
-    <head>
-        <title>Interactive Periodic Table</title>
-        <!-- external CSS/font -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- internal CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        <!-- internal CSS -->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- external JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-        <!-- external JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-        <!-- internal JS -->
-        <script src="js/script.js"></script>
+    <!-- internal JS -->
+    <script src="js/script.js"></script>
 
 
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
 
-    </head>
-
+</head>
+    
+<body class="main">
     <!-- TITLE -->
 
-    <h1>Periodic Table of Elements</h1>
+    <div class="header-container">
+        <span>Periodic Table of Elements</span>
+        <div class="buttons">
+            <button id="filter-elements">Filter Series</button>
+            <button id="unusual-elements" class="type-1">Unusual Abbreviations</button>
+            <button id="clear-filter" class="type-2">Clear Filter</button>
+        </div>
+    </div>
 
-    <!-- BUTTONS -->
 
+    <!-- FILTER BUTTONS -->
     <div class="key-container">
-        <button id="filter-elements">Filter Series</button>
-        <button id="unusual-elements" class="type-1">Unusual Abbreviations</button>
-        <button id="clear-filter" class="type-2">Clear Filter</button>
-
-
         <div id="key-expander">
-
             <ol class="periodic-key">
                 <li class="type-0" onClick="showElements(this);">Hydrogen</li>
                 <li class="type-1" onClick="showElements(this);">Nobel Gases</li>

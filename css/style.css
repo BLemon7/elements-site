@@ -12,17 +12,32 @@ abbr {
 
 body {
     font-family: 'Raleway', sans-serif;
-    margin: 5vw;
-    background: #848482;
+    background: #375344;
     color: #000;
     counter-reset: element;
+    background-image: url(../images/blackboard.png);
+    margin: 0;
+    background-size: cover;
+    background-attachment: fixed;
+   /* overflow: hidden; */
 }
+
+/*.main {
+    background-image: url(../images/blackboard.png);
+    background-size: cover;
+} */
+
+.element {
+    font-family: 'Walter Turncoat', cursive;
+    color: #fff;
+}
+
 
 h1 {
     font-size: 48px;
     letter-spacing: 5px;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     color: #fff;
     text-align: center;
 }
@@ -70,6 +85,10 @@ p {
     letter-spacing: 1px;
     padding-bottom: 10px;
     line-height: 2;
+}
+
+ol.periodic-table {
+    margin: 1vw 5vw 0 5vw;
 }
 
 .periodic-key {
@@ -265,14 +284,24 @@ img {
     height: 100vh;
 }
 
+
+.fact p {
+    font-family: 'Walter Turncoat', cursive;
+    color: #d3d3d3;
+    font-size: 30px;
+    max-width: 53%;
+}
+
 .element {
     height: 100vh;
 }
 
 #key-expander {
     display: none;
+    padding: 0 10px 0 10px;
 }
 
+/*
 .hoverbox,
 .hoverbox * {
     box-sizing: border-box;
@@ -341,7 +370,7 @@ img {
 .hoverbox .hoverbox-text_mobile {
     font-size: 15px;
     border-top: 1px solid rgb(179, 179, 179);
-    /* for old browsers */
+   
     border-top: 1px solid rgba(179, 179, 179, 0.7);
     margin-top: 5px;
     padding-top: 2px;
@@ -350,6 +379,54 @@ img {
 
 .hoverbox.active .hoverbox-text_mobile {
     display: block;
+}
+
+*/
+
+.hoverbox {
+  position: relative;
+  width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hoverbox-layer_bottom {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hoverbox-layer_top {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+ /* background-color: #008CBA;*/
+     background: rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+}
+
+.hoverbox:hover .hoverbox-layer_top {
+  opacity: 1;
+}
+
+.hoverbox-text {
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 100;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 #breadcrumb {
@@ -495,8 +572,34 @@ button:hover {
     background: rgba(0, 0, 0, .5);
 }
 
+.header-container {
+    background: #375344
+;
+    margin: 0;
+    height: 6.9vw;
+}
+
+.header-container span {
+    color: white;
+    font-size: 50px;
+    padding: 30px;
+    line-height: 6.9vw;
+}
+
+.header-container .buttons {
+    float: right;
+    padding: 9px 10px 0 0;
+}
+
 
 /* MEDIA */
+
+@media all and (max-width: 1170px) {
+    .key-container,
+    .buttons {
+        display: none;
+    }
+}
 
 @media all and (max-width: 1100px) {
     .helium,
@@ -533,7 +636,8 @@ button:hover {
     .periodic-table:before {
         display: none !important;
     }
-    .key-container {
+    .key-container,
+    .buttons {
         display: none;
     }
     a {
@@ -542,9 +646,6 @@ button:hover {
 }
 
 @media all and (max-width: 750px) {
-    body {
-        margin: 2vw;
-    }
     .periodic-table {
         grid-template-columns: 1fr 1fr;
         border-radius: 0%;
@@ -554,11 +655,15 @@ button:hover {
         font-size: 3vw;
         border-radius: 0%;
     }
-    .key-container {
+    .key-container,
+    .buttons {
         display: none;
     }
     a {
         padding-top: 10px;
+    }
+    .header-container span {
+        font-size: 20px;
     }
 }
 
@@ -568,10 +673,61 @@ button:hover {
         grid-template-columns: 1fr;
         border-radius: 0%;
     }
-    .key-container {
+    .key-container,
+    .buttons {
         display: none;
     }
     a {
         padding-top: 0;
     }
+}
+
+@media all and (max-width: 550px) {
+.hoverbox {
+  position: relative;
+  width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+/* .hoverbox-layer_bottom {
+  display: block;
+  width: 100%;
+  height: auto;
+} */
+
+.hoverbox-layer_top {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+ /* background-color: #008CBA;*/
+     background: rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+}
+
+.hoverbox:hover .hoverbox-layer_top {
+  opacity: 1;
+}
+
+@media all and (max-width: 550px) {
+.hoverbox-text {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 100;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 }
