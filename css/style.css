@@ -38,33 +38,27 @@ body {
     position: fixed;
     z-index: 999999999;
 }
-
 #left,
 #right {
     top: 0;
     bottom: 0;
     width: 15px;
 }
-
 #left {
     left: 0;
 }
-
 #right {
     right: 0;
 }
-
 #top,
 #bottom {
     left: 0;
     right: 0;
     height: 15px;
 }
-
 #top {
     top: 0;
 }
-
 #bottom {
     bottom: 0;
 }
@@ -330,7 +324,7 @@ img {
     padding-top: 30%;
 }
 
-.atomic-weight {
+.atomic-weight, .atomic-weight-text {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -338,12 +332,36 @@ img {
     padding-top: 75%;
 }
 
-.atomic-no {
+.atomic-no, .atomic-no-text {
     text-align: left;
-    /*margin: 5px;*/
+    /margin: 5px;/
     font-size: 3.5vh;
     padding-top: 5%;
     padding-left: 5%;
+}
+
+.square:hover .square-layer_top {
+    opacity: 1;
+}
+
+.square:hover .atomic-no, 
+.square:hover .atomic-weight {
+	visibility: hidden;
+}
+
+.square-layer_top {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .5s ease;
+		background: rgba(0, 0, 0, 0.5);
+		color: red;
+		z-index: 9999;
 }
 
 .info {
@@ -379,7 +397,6 @@ img {
 .hoverbox * {
     box-sizing: border-box;
 }
-
 .hoverbox {
     position: relative;
     display: inline-block;
@@ -387,16 +404,13 @@ img {
     max-width: 100%;
     height: auto;
 }
-
 .hoverbox img {
     max-width: 20%;
     border-radius: 100%;
 }
-
 .hoverbox .hoverbox-layer_bottom {
     display: block;
 }
-
 .hoverbox .hoverbox-layer_top {
     margin: 0 auto;
     opacity: 0;
@@ -416,13 +430,11 @@ img {
     -ms-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;
 }
-
 .hoverbox:hover .hoverbox-layer_top,
 .hoverbox.active .hoverbox-layer_top {
     opacity: 1;
     z-index: 999999;
 }
-
 .hoverbox .hoverbox-text {
     text-align: center;
     font-size: 25px;
@@ -439,7 +451,6 @@ img {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-
 .hoverbox .hoverbox-text_mobile {
     font-size: 15px;
     border-top: 1px solid rgb(179, 179, 179);
@@ -449,11 +460,9 @@ img {
     padding-top: 2px;
     display: none;
 }
-
 .hoverbox.active .hoverbox-text_mobile {
     display: block;
 }
-
 */
 
 .hoverbox {
