@@ -360,8 +360,12 @@ img {
 		opacity: 0;
 		transition: .5s ease;
 		background: rgba(0, 0, 0, 0.5);
-		color: red;
+		color: #ff6961; 
 		z-index: 9999;
+}
+
+.colour-chalk {
+    color: #779ecb;
 }
 
 .info {
@@ -559,16 +563,16 @@ img {
 }
 
 #breadcrumb li:nth-child(even) a {
-    background-color: #2980b9;
+    background-color: #779ecb;
 }
 
 #breadcrumb li:nth-child(even) a:before {
-    border-color: #2980b9;
+    border-color: #779ecb;
     border-left-color: transparent;
 }
 
 #breadcrumb li:nth-child(even) a:after {
-    border-left-color: #2980b9;
+    border-left-color: #0067a5;
 }
 
 #breadcrumb li:first-child a {
